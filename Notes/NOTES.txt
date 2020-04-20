@@ -1,0 +1,36 @@
+php composer.phar install
+
+generate key and put in .env:
+php artisan key:generate --show
+
+
+generate database and put in .env 
+
+run migration 
+php artisan migrate --force
+install
+composer require tcg/voyager
+
+install voyager
+php artisan voyager:install --with-dummy
+
+php artisan cache:clear
+
+
+search 'assets_path' and replace paths with real url
+set APP_URL=http://localhost/voyager/demo2 in .env 
+set in .env
+DB_DATABASE=voyager
+DB_USERNAME=root
+DB_PASSWORD=root
+
+
+copy storage 
+D:\xampp7.2\htdocs\voyager\demo2\storage\app\public\
+to 
+D:\xampp7.2\htdocs\storage
+
+
+//to create page 
+create table from admin 
+php artisan make:model Product
